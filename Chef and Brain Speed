@@ -1,0 +1,13 @@
+def prone_to_errors(threshold, current_speed):
+    if current_speed > threshold:
+        return "YES"
+    else:
+        return "NO"
+
+def main():
+    X, Y = map(int, input().split())
+    result = prone_to_errors(X, Y)
+    print(result)
+
+if __name__ == "__main__":
+    main()
