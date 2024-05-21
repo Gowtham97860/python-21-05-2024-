@@ -1,0 +1,8 @@
+def fibonacci(n):
+    t1, t2 = 0, 1
+    print(f'Fibonacci Series: {t1}, {t2}', end='')
+    for i in range(2, n):
+        t3 = t1 + t2
+        t1, t2 = t2, t3
+        print(f', {t3}', end='')
+fibonacci(10)
