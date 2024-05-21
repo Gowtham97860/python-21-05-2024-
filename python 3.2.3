@@ -1,0 +1,24 @@
+def find_coincide_time(hours):
+    if hours < 0 or hours > 11:
+        return "Invalid input"
+    else:
+        degrees_per_minute_hour = 360 / (12 * 60)
+        degrees_per_minute_minute = 360 / 60
+
+        hour_hand_position = (hours % 12) * 60
+        minute_hand_position = 0
+
+        while hour_hand_position != minute_hand_position:
+            hour_hand_position = (hour_hand_position + degrees_per_minute_hour) % 360
+            minute_hand_position = (minute_hand_position + degrees_per_minute_minute) % 360
+
+        return int(hour_hand_position / degrees_per_minute_hour)
+
+def main():
+    hours = int(input("Enter time in hours: "))
+
+    result = find_coincide_time(hours)
+    print("({} / 11)".format(result))
+
+if __name__ == "__main__":
+    main()
