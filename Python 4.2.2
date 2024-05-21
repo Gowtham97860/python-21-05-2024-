@@ -1,0 +1,30 @@
+def is_prime(num):
+    if num < 2:
+        return False
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+def unique_prime_factors_product(num):
+    if num <= 0:
+        return "Invalid input"
+    
+    prime_factors = set()
+    for i in range(2, num + 1):
+        if num % i == 0 and is_prime(i):
+            prime_factors.add(i)
+    
+    product = 1
+    for factor in prime_factors:
+        product *= factor
+    
+    return product
+
+def main():
+    num = int(input("Enter a number: "))
+    result = unique_prime_factors_product(num)
+    print("Product is", result)
+
+if __name__ == "__main__":
+    main()
