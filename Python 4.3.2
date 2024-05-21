@@ -1,0 +1,19 @@
+def fibonacci_reverse(n):
+    if n <= 0:
+        print("Invalid input")
+        return
+
+    fib_sequence = [0, 1]
+    while len(fib_sequence) < n:
+        next_fib = fib_sequence[-1] + fib_sequence[-2]
+        fib_sequence.append(next_fib)
+
+    for i in range(n - 1, -1, -1):
+        print(fib_sequence[i], end=" ")
+
+def main():
+    n = int(input("Enter any number: "))
+    fibonacci_reverse(n)
+
+if __name__ == "__main__":
+    main()
