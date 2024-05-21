@@ -1,0 +1,44 @@
+def add(num1, num2):
+    return num1 + num2
+
+def subtract(num1, num2):
+    return num1 - num2
+
+def multiply(num1, num2):
+    return num1 * num2
+
+def divide(num1, num2):
+    return num1 / num2
+
+def modulus(num1, num2):
+    return num1 % num2
+
+def average(num1, num2):
+    return (num1 + num2) / 2
+
+def power(base, exponent):
+    return base ** exponent
+
+def main():
+    num1, num2 = map(int, input("Enter two numbers: ").split())
+    choice = int(input("Enter your option: "))
+
+    if choice == 1:
+        print("Sum =", add(num1, num2))
+    elif choice == 2:
+        print("Difference =", subtract(num1, num2))
+    elif choice == 3:
+        print("Product =", multiply(num1, num2))
+    elif choice == 4:
+        print("Quotient =", divide(num1, num2))
+    elif choice == 5:
+        print("Modulus =", modulus(num1, num2))
+    elif choice == 6:
+        print("Average = {:.2f}".format(average(num1, num2)))
+    elif choice == 7:
+        print("Power =", power(num1, num2))
+    else:
+        print("Invalid choice!")
+
+if __name__ == "__main__":
+    main()
