@@ -1,0 +1,21 @@
+def find_nth_number(n, k):
+    count = 0
+    num = 0
+    while count < n:
+        num += 1
+        if str(k) in str(num) or num % k == 0:
+            count += 1
+    return num
+
+def main():
+    n = int(input("Enter n: "))
+    k = int(input("Enter k (between 2 and 9): "))
+    
+    if 2 <= k <= 9:
+        result = find_nth_number(n, k)
+        print("Output:", result)
+    else:
+        print("Invalid input for k")
+
+if __name__ == "__main__":
+    main()
