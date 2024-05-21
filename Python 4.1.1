@@ -1,0 +1,7 @@
+def find_sum_of_multiples(n, m, divisor):
+    sum = 0
+    for i in range(n, m+1):
+        if i % divisor == 0:
+            sum += i
+    return sum
+print(find_sum_of_multiples(10, 20, 9))
